@@ -1,0 +1,38 @@
+{
+ "model": "megabyte",
+ "repo": "LM_2023_Megabyte-pytorch",
+ "target_repo": "LM_Dec_Long_MEGABYTE",
+ "category": "Long",
+ "upstream": "lucidrains/MEGABYTE-pytorch (MIT)",
+ "unified": [
+  "2 stages dim (512, 256) depth (6, 2), patch 8 (upstream train.py: 3 stages, 768/512/256)"
+ ],
+ "torch": "2.5.1+cu124",
+ "gpu": "NVIDIA GeForce RTX 3070 Ti",
+ "stage": "check",
+ "started": "2026-10-19 14:21:40",
+ "smoke": false,
+ "params": 23299840,
+ "causality": {
+  "causal": true,
+  "uses_input": true,
+  "worst_leak": 0.0,
+  "min_effect": 1.5543583631515503,
+  "logit_scale": 2.3958096967468263,
+  "length": 256,
+  "positions": [
+   17,
+   101,
+   200
+  ]
+ },
+ "data_checks": [
+  "enwik8 train bytes  90,000,000 expected  90,000,000 OK",
+  "enwik8 valid bytes   5,000,000 expected   5,000,000 OK",
+  "enwik8 test  bytes   5,000,000 expected   5,000,000 OK",
+  "enwik8 distinct byte values in first 10M train bytes: 200 (vocab 256)",
+  "recall L=512 random gap: 16 answers/sample, keys/values/distractors disjoint OK",
+  "recall L=512 max gap: 16 answers/sample, keys/values/distractors disjoint OK"
+ ],
+ "seconds": 2.2
+}

@@ -1,0 +1,23 @@
+{
+ "model": "megabyte",
+ "repo": "LM_2023_Megabyte-pytorch",
+ "target_repo": "LM_Dec_Long_MEGABYTE",
+ "category": "Long",
+ "upstream": "lucidrains/MEGABYTE-pytorch (MIT)",
+ "unified": [
+  "2 stages dim (512, 256) depth (6, 2), patch 8 (upstream train.py: 3 stages, 768/512/256)"
+ ],
+ "torch": "2.5.1+cu124",
+ "gpu": "NVIDIA GeForce RTX 3070 Ti",
+ "stage": "overfit",
+ "started": "2026-10-19 14:37:00",
+ "smoke": false,
+ "first_ce": 5.690768241882324,
+ "last_ce": 0.0015322299441322684,
+ "passed": true,
+ "pass_loss": 0.5,
+ "steps": 400,
+ "seconds": 15.0,
+ "lr": 0.001,
+ "note": "overfit uses Adam 1e-3 on 4 x 256 bytes; only an implementation check"
+}

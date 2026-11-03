@@ -1,0 +1,73 @@
+{
+ "model": "megabyte",
+ "repo": "LM_2023_Megabyte-pytorch",
+ "target_repo": "LM_Dec_Long_MEGABYTE",
+ "category": "Long",
+ "upstream": "lucidrains/MEGABYTE-pytorch (MIT)",
+ "unified": [
+  "2 stages dim (512, 256) depth (6, 2), patch 8 (upstream train.py: 3 stages, 768/512/256)"
+ ],
+ "torch": "2.5.1+cu124",
+ "gpu": "NVIDIA GeForce RTX 3070 Ti",
+ "stage": "scaling",
+ "started": "2026-10-19 14:22:48",
+ "smoke": false,
+ "rows": [
+  {
+   "len": 512,
+   "train": {
+    "peak_mb": 108.8,
+    "ms": 28.9
+   },
+   "infer": {
+    "peak_mb": 49.9,
+    "ms": 9.0
+   }
+  },
+  {
+   "len": 1024,
+   "train": {
+    "peak_mb": 104.1,
+    "ms": 25.9
+   },
+   "infer": {
+    "peak_mb": 55.9,
+    "ms": 9.0
+   }
+  },
+  {
+   "len": 2048,
+   "train": {
+    "peak_mb": 165.9,
+    "ms": 25.9
+   },
+   "infer": {
+    "peak_mb": 68.3,
+    "ms": 9.5
+   }
+  },
+  {
+   "len": 4096,
+   "train": {
+    "peak_mb": 281.8,
+    "ms": 26.4
+   },
+   "infer": {
+    "peak_mb": 90.6,
+    "ms": 10.0
+   }
+  },
+  {
+   "len": 8192,
+   "train": {
+    "peak_mb": 518.4,
+    "ms": 29.6
+   },
+   "infer": {
+    "peak_mb": 136.1,
+    "ms": 10.0
+   }
+  }
+ ],
+ "seconds": 3.8
+}

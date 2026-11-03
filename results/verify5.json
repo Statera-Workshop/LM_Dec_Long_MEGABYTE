@@ -1,0 +1,28 @@
+{
+ "model": "megabyte",
+ "repo": "LM_2023_Megabyte-pytorch",
+ "target_repo": "LM_Dec_Long_MEGABYTE",
+ "category": "Long",
+ "upstream": "lucidrains/MEGABYTE-pytorch (MIT)",
+ "unified": [
+  "2 stages dim (512, 256) depth (6, 2), patch 8 (upstream train.py: 3 stages, 768/512/256)"
+ ],
+ "torch": "2.5.1+cu124",
+ "gpu": "NVIDIA GeForce RTX 3070 Ti",
+ "stage": "verify5",
+ "started": "2026-10-20 08:49:20",
+ "smoke": false,
+ "rows": {
+  "512": {
+   "normal": 0.10107421875,
+   "values": 0.014892578125,
+   "keys": 0.06298828125
+  },
+  "2048": {
+   "normal": 0.098876953125,
+   "values": 0.016845703125,
+   "keys": 0.060302734375
+  }
+ },
+ "seconds": 3.9
+}
